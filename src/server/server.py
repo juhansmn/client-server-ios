@@ -53,6 +53,7 @@ def resolver_cliente(cliente):
     #Enquanto o estiver conectado
     while True:
         mensagem_cliente = cliente.conexao.recv(TAMANHO)
+        mensagem_cliente = str(mensagem_cliente.decode(FORMATO))
 
         if not mensagem_cliente:
             break
